@@ -31,3 +31,11 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
+
+.calculator-grid > button:hover {
+    background-color: #7F00FF;
+    color: #ffffff;
+}
+.span-two {
+    grid-column: span 2;
+}
