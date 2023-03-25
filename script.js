@@ -66,9 +66,9 @@ class Calculator {
 
     
     getDisplayNumber(number) {
-        const stringNumber = number.toString();
-        const integerDigits = parseFloat(stringNumber.split(".")[0]);
-        const decimalDigits = stringNumber.split(".")[1];
+        const stringNum = number.toString();
+        const integerDigits = parseFloat(stringNum.split(".")[0]);
+        const decimalDigits = stringNum.split(".")[1];
         let integerDisplay;
         if (isNaN(integerDigits)) {
             integerDisplay = "";
@@ -83,11 +83,13 @@ class Calculator {
             return integerDisplay;
         }
     }
-    
+
     updateDisplay() {
-        this.currentOperandEl.innerText = this.currentOperand;
+        this.currentOperandEl.innerText = this.getDisplayNumber(this.currentOperand);
         if (this.operation != null) {
             this.previousOperandEl.innerText = `${this.previousOperand} ${this.operation}`;
+        } else {
+            this.previousOperandEl.innerText = "";
         }
     }
 }
