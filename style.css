@@ -45,14 +45,18 @@ body {
 
 .output {
     grid-column: 1 / -1;
-    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
     padding: 0 20px;
     font-size: 2rem;
     color: #ffffff;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .output .previous-operand {
-    color: #676767;
+    color: #ffffff;
     font-size: 1.5rem;
 }
 
